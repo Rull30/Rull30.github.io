@@ -133,10 +133,24 @@
       transform: scale(1.65);
     }
 
+    .active-menu {
+      color: #B63434;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal; 
+    }
+
     @media(min-width: 1024px) {
       .img-hero {
         margin-top: 100px;
         transform: scale(2);
+      }
+    }
+    @media (max-width: 768px) {
+      .img-hero {
+        padding-top: 30px;
+        margin-top: 0;
+        transform: scale(1.3);
       }
     }
   </style>
@@ -144,68 +158,64 @@
 
 <body>
   <header>
-    <nav class="px-4 lg:px-24 py-2.5" style="background-color: #B63434;">
-      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-5 mt-2">
-        <a href="" class="flex items-center">
-          <span
-            class="self-center text-xl font-semibold whitespace-nowrap poppins-semibold dark:text-white lg:text-2xl">Sahrul
-            Kitchen</span>
+    <nav class=" px-4 lg:px-6 py-5" style="background-color: #B63434;">
+      <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+        <a href="https://flowbite.com" class="flex items-center">
+          <span class="self-center text-3xl poppins-bold whitespace-nowrap dark:text-white">Sahrul Kitchen</span>
         </a>
-        <div class="justify-end items-right w-full lg:flex lg:w-auto lg:order-1">
+        <div class="lg:hidden items-center sm:flex">
+          <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg sm:block lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-red-900 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" id="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+        
+        <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1 lg:me-10" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <a href="#"
-                class="poppins-semibold block py-2 px-0 pr-4 pl-3 text-white rounded bg-primary-700 lg:text-primary-700 lg:p-0 lg:text-xl dark:text-white"
-                aria-current="page">Beranda</a>
+                <a href="#" class="block poppins-semibold py-2 pr-4 pl-3 text-white rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 lg:text-xl  dark:text-white" aria-current="page">Beranda</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 poppins-semibold pr-4 pl-3 text-white rounded bg-primary-700 lg:text-primary-700 lg:p-0 lg:text-xl dark:text-white">Pesan</a>
+                <a href="#" class="block poppins-semibold py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:text-xl  lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Pesan</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 pr-4 poppins-semibold pl-3 text-white rounded bg-primary-700 lg:text-primary-700 lg:p-0 lg:text-xl dark:text-white">Menu</a>
+                <a href="#" class="block poppins-semibold py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:text-xl  lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Menu</a>
             </li>
             <li>
-              <a href="#"
-                class="block py-2 pr-4 pl-3 poppins-semibold text-white rounded bg-primary-700 lg:text-primary-700 lg:p-0 lg:text-xl dark:text-white">Kontak</a>
+                <a href="#" class="block poppins-semibold py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:text-xl  lg:border-0 lg:hover:text-primary-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Kontak</a>
             </li>
-          </ul>
+            </li>
+        </ul>
         </div>
       </div>
     </nav>
-    <!-- <div class="hero" style="background-color: #B63434;">
-            <img src="assets/images/adas.png" class="img-hero brightness-75 pt-6" alt="">
-        </div> -->
-    <div style="background-color: #B63434;">
-
-      <div class="flex flex-row">
-        <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000"
-          class="item-right pt-5 mt-5 me-6 lg:mr-0">
+  </header>
+      <div class="lg:flex md:flex lg:flex-row md:flex-row sm:mt-30" style="background-color: #B63434;">
+        <div data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000" class="sm:text-center item-right">
           <img src="assets/images/adas.png" alt="Burger"
-            class="rounded-lg  mt-15 img-hero -ms-20 lg:-ms-15 contrast-150"
+            class="rounded-lg md:mt-15 lg:mt-15 img-hero -ms-20 lg:-ms-15 contrast-150"
             style="filter: drop-shadow(20px 0 10px rgba(0, 0, 0, 0.5));">
-
         </div>
-        <div class="mt-44 pt-6 item-left absolute top-0 right-0 md:me-30 lg:me-44">
-          <h1 class="poppins-regular text-white text-3xl lg:text-4xl md:text-2xl">Burger</h1>
-          <h2 class="text-8xl font-extrabold text-yellow-300 lg:text-8xl md:text-7xl">The <span
-              class="text-white">Savage</span></h2>
-          <p class="text-4xl line-through text-white lg:text-4xl md:text-3xl ">Rp. 55.000</p>
-          <p class="text-5xl font-bold text-white lg:text-5xl md:text-4xl">Rp. 35.000</p>
-          <button class="mt-4 px-6 py-2 bg-white text-dark font-bold rounded-lg shadow-lg">
-            <div class="flex">
+        <div class="flex flex-col justify-center p-4 md:w-1/2 lg:w-1/2 lg:ms-44 sm:-mt-20">
+          <h1 class="poppins-regular text-white text-xl sm:text-4xl md:text-3xl lg:text-4xl">Burger</h1>
+          <h2 class="font-extrabold text-yellow-300 text-6xl sm:text-8xl md:text-6xl lg:text-8xl">The <span class="text-white">Savage</span></h2>
+          <p class="text-lg sm:text-xl md:text-2xl lg:text-4xl line-through text-white">Rp. 55.000</p>
+          <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">Rp. 35.000</p>
+          <button class="mt-4 px-6 py-2 bg-white text-dark font-bold rounded-lg shadow-lg" style="width: 200px;">
+            <div class="flex justify-center">
               <i class="me-1" data-feather="shopping-cart"></i>
               Pesan Sekarang
             </div>
           </button>
         </div>
       </div>
-    </div>
+      
+      
+      
     <div class="bg md:-mt-10">
       <img src="assets/images/svg (3).png" alt="">
     </div>
-  </header>
 
   <section id="about">
     <div class="container mx-auto px-7 lg:pb-44 sm:pb-20 md:pb-20">
@@ -248,11 +258,15 @@
     <div class="flex justify-center">
       <p class="py-2 px-10 bg-red-600 text-center text-white uppercase rounded-xl text-4xl poppins-bold">Menu</p>
     </div>
-    <div class="text-center my-5">
-      <p class="mt-4 text-xl text-gray-700"> <a class="text-red-600 poppins-bold">Western</a> / <a
-          href="#">Indonesian</a> / <a href="#">Asians</a></p>
+    <div class="text-center my-5 flex justify-center">
+      <a href="#" class="menu-item active-menu" data-target="#wester-menu">Wester</a>
+      <p class="mx-1">/</p>
+      <a href="#" class="menu-item" data-target="#indonesia-menu">Indonesia</a>
+      <p class="mx-1">/</p>
+      <a href="#" class="menu-item" data-target="#asians-menu">Asians</a>
     </div>
-    <div class="px-10">
+    
+    <div class="px-10 section" id="wester-menu">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div class="text-center">
           <div class="w-full h-48 relative">
@@ -298,6 +312,99 @@
         </div>
       </div>
     </div>
+    <div class="px-10 section" id="indonesia-menu" style="display: none;">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/pizza.png" alt="Classic Pizza" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">Classic Pizza</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 75.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/meatball.png" alt="Meatballs" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">Meatballs</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 35.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/m&c.png" alt="Mac And Cheese" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">Mac And Cheese</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 40.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/nuggets.png" alt="Chicken Nuggets" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">Chicken Nuggets</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 24.500</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/fries.png" alt="French Fries" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">French Fries</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 17.500</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/steak.png" alt="Beef Steak" class="w-full h-full scale-95">
+          </div>
+          <h2 class="text-2xl mt-4 poppins-light">Beef Steak</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 35.000</p>
+        </div>
+      </div>
+    </div>
+    <div class="px-10 section" id="asians-menu" style="display: none;">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/ramen.png" alt="Beef Ramen" class="w-full -mt-10 lg:scale-50" style="transform: scale(0.8);">
+          </div>
+          <h2 class="text-2xl mt-16 poppins-light">Beef Ramen</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 28.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/gyoza.png" alt="Meatballs" class="w-full -mt-10" style="transform: scale(0.7);">
+          </div>
+          <h2 class="text-2xl mt-16 poppins-light">Chicken Gyoza</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 21.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/sticky.png" alt="Mango Sticky Rice" class="w-full -mt-10" style="transform: scale(0.7);">
+          </div>
+          <h2 class="text-2xl mt-16 poppins-ligh">Mango Sticky Rice</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 17.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/sushi.png" alt="Sushi Train" class="w-full -mt-10" style="transform: scale(0.7);">
+          </div>
+          <h2 class="text-2xl mt-16 poppins-light">Sushi Train</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 85.500</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/kimchi-soup.png" alt="Korean Kimchi Soup" class="w-full -mt-4" style="transform: scale(0.7);">
+          </div>
+          <h2 class="text-2xl mt-10 poppins-light">Korean Kimchi Soup</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 25.000</p>
+        </div>
+        <div class="text-center my-1">
+          <div class="w-full h-48 relative">
+            <img src="assets/images/menu/beans-noodle.png" alt="Beef Steak"  class="w-full -mt-4" style="transform: scale(0.7);">
+          </div>
+          <h2 class="text-2xl mt-10 poppins-light">Black Beens Noodle</h2>
+          <p class="text-lg text-gray-600 poppins-light">Rp. 35.000</p>
+        </div>
+      </div>
+    </div>
+    
   </section>
 
   <section id="kontak" class="mt-14">
@@ -316,40 +423,77 @@
     </div>
   </section>
 
-  <section class="bg-white dark:bg-gray-800 mt-20">
+  <section class="mt-20" style="background-color: #B63434;">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 class="capitalize mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">get in touch with us</h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl capitalize">Have a question or just want to say hello? We’d love to hear from you! Get in touch with us using the contact information below, and we'll get back to you as soon as possible.</p>
+        <p class="mb-8 lg:mb-16 font-light text-center text-white sm:text-xl capitalize">Have a question or just want to say hello? We’d love to hear from you! Get in touch with us using the contact information below, and we'll get back to you as soon as possible.</p>
         <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-10">
-          <a href="https://www.instagram.com/shrlrmadhn22_/" target="_blank" id="instagram" class="bg-gray-700 flex justify-center py-8 rounded-xl transition-transform duration-300 hover:-translate-y-4 hover:bg-gray-500 group">
+          <a href="https://www.instagram.com/shrlrmadhn22_/" target="_blank" id="instagram" class="bg-red-900 flex justify-center py-8 rounded-xl transition-transform duration-300 hover:-translate-y-4 hover:bg-red-500 group">
             <div class="text-center">
-              <i class="text-5xl bi bi-instagram text-gray-500 transition-colors duration-300 group-hover:text-gray-300"></i>
-              <h4 class="text-xl text-gray-500 poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Instagram</h4>
+              <i class="text-5xl bi bi-instagram text-white transition-colors duration-300 group-hover:text-gray-300"></i>
+              <h4 class="text-xl text-white poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Instagram</h4>
             </div>
           </a>          
-          <a id="tiktok" href="https://www.tiktok.com/@rullfoxz" target="_blank" class="bg-gray-700 flex justify-center py-8 rounded-xl  transition-transform duration-300 hover:-translate-y-4 hover:bg-gray-500 group">
+          <a id="tiktok" href="https://www.tiktok.com/@rullfoxz" target="_blank" class="bg-red-900 flex justify-center py-8 rounded-xl  transition-transform duration-300 hover:-translate-y-4 hover:bg-red-500 group">
             <div class="text-center">
-              <i class="text-5xl bi bi-tiktok text-gray-500 transition-colors duration-300 group-hover:text-gray-300"></i>
-              <h4 class="text-xl text-gray-500 poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Tiktok</h4>
+              <i class="text-5xl bi bi-tiktok text-white transition-colors duration-300 group-hover:text-gray-300"></i>
+              <h4 class="text-xl text-white poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Tiktok</h4>
             </div>
           </a>
-          <a id="whatsapp" href="https://wa.me/6287793183539" target="_blank" class="bg-gray-700 flex justify-center py-8 rounded-xl  transition-transform duration-300 hover:-translate-y-4 hover:bg-gray-500 group">
+          <a id="whatsapp" href="https://wa.me/6287793183539" target="_blank" class="bg-red-900 flex justify-center py-8 rounded-xl  transition-transform duration-300 hover:-translate-y-4 hover:bg-red-500 group">
             <div class="text-center">
-              <i class="text-5xl bi bi-whatsapp text-gray-500 transition-colors duration-300 group-hover:text-gray-300"></i>
-              <h4 class="text-xl text-gray-500 poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Whatsapp</h4>
+              <i class="text-5xl bi bi-whatsapp text-white transition-colors duration-300 group-hover:text-gray-300"></i>
+              <h4 class="text-xl text-white poppins-bold mt-4 transition-colors duration-300 group-hover:text-gray-300">Whatsapp</h4>
             </div>
           </a>
         </div>
     </div>
   </section>
 
-  <section id="copyright" class="bg-yellow-300 dark:bg-gray-800 py-2">
+  <section id="copyright" class="py-2" style="background-color: #B63434;">
     <div class="px-10 text-start">
       <p class="text-lg poppins-regular dark:text-white">Copyright Sahrulⓒ2024</p>
     </div>
   </section>
 
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuButton = document.getElementById('mobile-menu-2');
+      var menu = document.querySelector('#mobile-menu-2');
+  
+      menuButton.addEventListener('click', function() {
+          var expanded = menuButton.getAttribute('aria-expanded') === 'true';
+          menuButton.setAttribute('aria-expanded', !expanded);
+          menu.classList.toggle('hidden');
+      });
+  });  
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuItems = document.querySelectorAll('.menu-item');
+      const sections = document.querySelectorAll('.section');
+      
+      menuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remove active-menu class from all menu items
+          menuItems.forEach(el => el.classList.remove('active-menu'));
+          
+          // Add active-menu class to clicked item
+          this.classList.add('active-menu');
+          
+          // Hide all sections
+          sections.forEach(section => section.style.display = 'none');
+          
+          // Show the target section
+          const target = this.getAttribute('data-target');
+          document.querySelector(target).style.display = 'block';
+        });
+      });
+    });
+    
     feather.replace();
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
