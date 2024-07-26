@@ -458,15 +458,13 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      var menuButton = document.getElementById('mobile-menu-2');
-      var menu = document.querySelector('#mobile-menu-2');
+      const toggleButton = document.querySelector('[data-collapse-toggle="mobile-menu-2"]');
+      const menu = document.getElementById('mobile-menu-2');
   
-      menuButton.addEventListener('click', function() {
-          var expanded = menuButton.getAttribute('aria-expanded') === 'true';
-          menuButton.setAttribute('aria-expanded', !expanded);
-          menu.classList.toggle('hidden');
+      toggleButton.addEventListener('click', function() {
+        menu.classList.toggle('hidden');
       });
-  });  
+    });
   </script>
 
   <script>
